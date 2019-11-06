@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Mail extends Component {
-    render() {
-        return(
-            <div className="mailing__container">
-                <h1> Mailing List </h1>
-                <p> Subscribe to our mailing list and receive all the latest updates for </p>
-                <p> Lurik Labs and Lurik Academy </p>
+export default props => {
+    return(
+        <section className="mailing__container">
+            <h1> {props.header} </h1>
+            <p> {props.text} </p>
 
-                <button> Subscribe </button>
-            </div>
-        )
-    }
+            <button> {props.button.text} </button>
+        </section>
+    )
 }
 
-export default Mail;
+
+// change into function
+// function until class is needed

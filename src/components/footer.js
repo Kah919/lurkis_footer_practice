@@ -1,27 +1,23 @@
-import React, { Component } from 'react';
-import AboutFooter from './aboutFooter.js';
-import ExploreFooter from './exploreFooter.js';
-import FollowFooter from './followFooter.js';
-import LegalFooter from './legalFooter.js';
+import React from 'react';
+import FooterColumns from './FooterColumns';
 
+export default props => {
+    let lists = props.lists.map(list => {
+        return <FooterColumns header={ list.header } links={ list.links }/>
+    })
 
+    return(
+        <footer>
+            <div className="footer__list">
+                <article className="footer__column">
+                    <h1> { props.header } </h1>
+                    <p> { props.text } </p>
+                </article>
+                { lists }
+            </div>
 
-
-class Footer extends Component {
-    render() {
-        return(
-            <footer>
-                <div className="footer__list">
-                    <AboutFooter />
-                    <ExploreFooter />
-                    <FollowFooter />
-                    <LegalFooter />
-                </div>
-
-                <div className="trademark"> ©2019 Lurik Labs All Rights Reserved </div>
-            </footer>
-        )
-    }
+            <div className="trademark"> ©2019 Lurik Labs All Rights Reserved </div>
+        </footer>
+    )
 }
 
-export default Footer;
