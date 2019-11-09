@@ -1,5 +1,7 @@
 import React from 'react';
 import FooterColumns from './FooterColumns';
+import styled from 'styled-components';
+
 
 export default props => {
     let lists = props.lists.map(list => {
