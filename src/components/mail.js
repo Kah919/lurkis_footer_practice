@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+// import Button from 'react-bootstrap/button'
 
 export default props => {
 
@@ -19,3 +20,5 @@ export default props => {
         </section>
     )
 }
+
+{/* <Button variant="primary">Primary</Button> */}
